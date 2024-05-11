@@ -5,6 +5,7 @@ import HeaderComponent from "./components/HeaderComponent";
 import FooterComponent from "./components/FooterComponent";
 
 // User Components
+import RoutesWithUserChatComponent from "./components/user/RoutesWithUserChatComponent";
 
 
 // Publicaly Available Pages :
@@ -52,6 +53,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="*" element="Page not exists 404" />
+      </Route>
 
         {/* <Route path="/" component={HomePage} /> in previous version of react-router-dom */}
   
@@ -63,11 +65,11 @@ function App() {
           <Route path="/user/order-details" element={<UserOrderDetailsPage />} />
         </Route>
 
-      </Route>
+
 
       
 
-      {/* user protected routes : */}
+      {/* admin protected routes : */}
       <Route element={<ProtectedRoutesComponent admin={true} />}>
         <Route path="/admin/users" element={<AdminUsersPage />} />
         <Route path="/admin/edit-user" element={<AdminEditUserPage />} />
