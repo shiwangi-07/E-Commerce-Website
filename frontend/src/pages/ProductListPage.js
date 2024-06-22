@@ -6,6 +6,7 @@ import PriceFilterComponent from "../components/filterQueryResultOptions/PriceFi
 import RatingFilterComponent from "../components/filterQueryResultOptions/RatingFilterComponent";
 import CategoryFilterComponent from "../components/filterQueryResultOptions/CategoryFilterComponent";
 import AttributesFilterComponent from "../components/filterQueryResultOptions/AttributesFilterComponent";
+
 const ProductListPage = () => {
   return (
     <Container fluid>
@@ -35,7 +36,12 @@ const ProductListPage = () => {
           </ListGroup>
         </Col>
         <Col md={9}>
-          <ProductForListComponent />
+          {Array.from({ length: 5 }).map((_,idx) => (
+            <ProductForListComponent key={idx} 
+              images={["games", "monitors", "tablets", "games", "monitors"]}
+              idx={idx} 
+            />
+          ))}
           <PaginationComponent />
         </Col>
       </Row>
