@@ -7,9 +7,9 @@ const products = [
     price: 100,
     category: "Computers/Laptops/Lenovo",
     images: [
+      { path: "/images/tablets-category.jpg" },
       { path: "/images/games-category.jpg" },
       { path: "/images/monitors-category.jpg" },
-      { path: "/images/tablets-category.jpg" },
     ],
     rating: 5,
     reviewsNumber: 5,
